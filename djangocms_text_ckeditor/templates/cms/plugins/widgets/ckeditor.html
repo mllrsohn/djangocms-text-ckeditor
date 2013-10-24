@@ -16,7 +16,14 @@ jQuery(document).ready(function ($) {
 
     // initialize ckeditor only if the container exists
 	if ($('#'+container).length > 0) {
-		CMS.CKEditor.init(container, {{ settings|safe }}, {
+        var settings = {{ settings|safe }};
+
+        if (window.location.href.indexOf('stuttgart-energie') !== -1) {
+            settings.contentsCss = settings['stuttgartEnergieCss'][0];
+        } else {
+            settings.contentsCss = settings['stadtwerkeStuttgartCss'][0];
+        }
+		CMS.CKEditor.init(container, settings, {
 			'static_url': '{{ STATIC_URL }}',
 			'page': '{{ plugin_pk }}',
 			'lang': {
