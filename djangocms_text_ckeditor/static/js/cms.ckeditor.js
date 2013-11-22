@@ -27,7 +27,7 @@ jQuery(document).ready(function ($) {
 				['Bold', 'Italic', 'Underline', '-', 'Subscript', 'Superscript', '-', 'RemoveFormat'],
 				['JustifyLeft', 'JustifyCenter', 'JustifyRight'],
 				['Link', 'Unlink'],
-				['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Table'],
+				['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Table', 'HorizontalRule'],
 				['Source']
 			],
 			'toolbarCanCollapse': false,
